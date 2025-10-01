@@ -1,0 +1,135 @@
+"use client"
+
+import * as React from "react"
+import Link from "next/link"
+import { CircleCheckIcon, CircleHelpIcon, CircleIcon, UserIcon } from "lucide-react"
+
+import {
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuTrigger,
+    navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu"
+import Image from "next/image"
+import { Avatar } from "./ui/avatar"
+import { ModeToggle } from "./modeToggle"
+
+const components: { title: string; href: string; description: string }[] = [
+    {
+        title: "Alert Dialog",
+        href: "/docs/primitives/alert-dialog",
+        description:
+            "A modal dialog that interrupts the user with important content and expects a response.",
+    },
+    {
+        title: "Hover Card",
+        href: "/docs/primitives/hover-card",
+        description:
+            "For sighted users to preview content available behind a link.",
+    },
+    {
+        title: "Progress",
+        href: "/docs/primitives/progress",
+        description:
+            "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+    },
+    {
+        title: "Scroll-area",
+        href: "/docs/primitives/scroll-area",
+        description: "Visually or semantically separates content.",
+    },
+    {
+        title: "Tabs",
+        href: "/docs/primitives/tabs",
+        description:
+            "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+    },
+    {
+        title: "Tooltip",
+        href: "/docs/primitives/tooltip",
+        description:
+            "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+    },
+]
+
+export function Navbar() {
+    return (
+        
+        <div className="fixed top-5 w-full flex items-center z-50">
+        
+        <header className="w-3/4 border-b h-[8vh] flex items-center justify-around shadow-sm shadow-secondary/50  rounded-xl mx-auto bg-background/70 backdrop-blur-sm">
+            <Link href={"/"}>
+            
+            <section className="flex items-center gap-2 justify-around">
+                <svg width="960" height="683" className="h-10 w-10" viewBox="0 0 960 683" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path  d="M389.095 380.876C381.821 317.773 385.538 255.192 394.021 192.502C401.985 133.651 418.103 77.419 455.642 30.023C463.747 19.793 475.427 6.861 486.557 0C539.397 37.52 567.937 115.792 578.427 177.951C586.247 225.789 589.597 274.25 588.437 322.708C587.937 341.268 585.148 364.399 585.018 381.133C604.878 404.9 628.527 425.607 644.967 451.627C645.997 453.257 647.908 462.737 648.128 464.597C649.798 478.127 649.278 563.437 644.388 569.987C638.138 569.197 622.977 560.847 616.927 557.317C616.807 556.177 616.577 554.827 615.447 554.187C586.407 537.757 552.737 521.137 518.787 523.967C511.437 524.287 504.868 524.247 497.508 524.137C498.308 464.757 496.928 405.094 497.388 345.693C507.118 345.548 516.847 345.498 526.587 345.544C518.327 335.316 497.268 313.196 487.388 304.008C481.268 310.689 453.316 337.889 452.834 343.705C456.493 345.417 471.057 345.639 475.737 345.858C473.617 353.616 472.477 360.138 471.417 368.132C465.997 408.819 453.016 448.587 440.332 487.477C433.622 508.047 415.12 518.737 407.237 532.357L406.528 532.667C395.327 534.267 337.598 568.797 328.856 567.347C324.536 560.387 323.899 470.467 326.499 459.457C327.932 453.407 330.464 447.667 333.97 442.537C340.885 432.267 355.381 418.235 364.206 408.419C372.048 399.695 381.091 389.026 389.095 380.876ZM495.487 242.699C518.547 238.139 533.527 215.731 528.927 192.682C524.317 169.632 501.887 154.695 478.847 159.34C455.863 163.972 440.972 186.337 445.563 209.326C450.153 232.315 472.487 247.247 495.487 242.699Z" fill="url(#paint0_linear_14_18)"/>
+                    <path className="fill-primary" d="M607.918 171.108C609.768 171.056 611.618 171.019 613.458 170.997C709.498 170.206 812.778 163.488 886.418 236.786C937.968 288.104 958.378 349.196 959.118 421.268C959.838 491.147 941.398 561.707 890.508 612.367C816.598 683.587 737.438 681.247 645.208 681.437L519.048 681.707L518.788 523.967C552.738 521.137 586.408 537.757 615.448 554.187C616.578 554.827 616.808 556.177 616.928 557.317C616.128 566.677 616.498 583.187 616.448 593.097C683.248 595.647 769.628 602.097 819.398 550.817C879.648 488.737 878.938 362.385 817.878 301.135C765.668 248.761 685.378 258.185 617.598 258.366C616.138 226.081 613.338 202.625 607.918 171.108Z" fill="black"/>
+                    <path  d="M475.738 345.858C478.528 349.82 477.318 377.896 477.288 383.761L476.908 453.187L476.588 519.577C476.518 535.317 477.098 553.637 474.468 569.017C468.848 601.837 448.024 631.037 420.643 649.587C369.718 684.077 304.454 682.227 245.533 682.227L146.653 682.077L54.6755 681.787C38.9195 681.837 16.0255 682.757 0.94451 681.897C0.64751 643.497 0.609534 605.087 0.831534 566.687C0.867534 544.237 0.088503 515.207 1.1375 493.217C26.7825 492.597 71.2335 491.847 96.3485 493.127C96.6445 526.387 96.7665 559.637 96.7145 592.897L238.312 592.727C260.888 592.697 283.989 591.967 306.49 592.317C347.375 592.937 391.602 574.017 406.529 532.667L407.238 532.357C415.121 518.737 433.623 508.047 440.333 487.477C453.017 448.587 465.998 408.819 471.418 368.132C472.478 360.138 473.618 353.616 475.738 345.858Z" fill="url(#paint1_linear_14_18)"/>
+                    <path  className="fill-primary" d="M2.9816 171.635C43.1056 170.82 85.6716 171.463 125.992 171.404L365.738 171.378C361.565 198.995 358.306 224.874 357.107 252.864C357.081 253.988 356.737 255.836 356.563 257.011C354.04 258.757 352.407 258.535 349.222 258.53C261.505 258.41 173.672 258.937 85.9717 258.425C52.4937 258.23 17.5806 239.1 6.67161 206.169C2.51061 193.604 2.4016 184.728 2.9816 171.635Z" fill="black"/>
+                    <path  className="fill-primary" d="M1.69564 381.576L329.938 381.385L330.616 401.43C317.073 415.11 309.812 422.309 301.697 439.577C298.237 449.017 297.209 455.977 296.076 465.877C260.403 466.527 222.69 465.907 186.874 465.907L1.17959 466.027L1.16061 413.476C1.16261 403.855 0.769642 390.815 1.69564 381.576Z" fill="black"/>
+                    <defs className="fill-primary">
+                    <linearGradient id="paint0_linear_14_18" x1="486.974" y1="0" x2="486.974" y2="569.987" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#9333EA"/>
+                    <stop offset="1" stopColor="#2563EB"/>
+                    </linearGradient>
+                    <linearGradient  id="paint1_linear_14_18" x1="420.968" y1="493.117" x2="21.9675" y2="656.117" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#2563EB"/>
+                    <stop offset="1" stopColor="#9333EA" stopOpacity="0.6"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+
+                <h1 className="text-2xl font-bold">Easy <span className="text-secondary">Deploy</span></h1>
+            </section></Link>
+            <nav className="hidden xl:flex  left-1/2 transform ">
+                  <div className="flex items-center space-x-1">
+                      {[
+                          { href: "/features", label: "Fonctionnalités" },
+                          { href: "/pricing", label: "Tarifs" },
+                          { href: "/docs", label: "Documentation" },
+                          { href: "/about", label: "À propos" },
+                          { href: "/contact", label: "Contact" },
+                      ].map((item) => (
+                          <Link
+                              key={item.href}
+                              href={item.href}
+                              className="relative px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-[#9333EA] dark:hover:text-[#9333EA] transition-all duration-200 rounded-lg hover:bg-gradient-to-r hover:from-[#9333EA]/5 hover:to-[#2563EB]/5 group whitespace-nowrap"
+                          >
+                              {item.label}
+                              <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#9333EA] to-[#2563EB] group-hover:w-full group-hover:left-0 transition-all duration-200" />
+                          </Link>
+                      ))}
+                  </div>
+              </nav>
+            <div className="flex items-center gap-2 justify-around">
+                <ModeToggle/>
+            <div className="h-10 w-10 bg-secondary/50 rounded-full flex items-center justify-center" >
+            
+            <UserIcon size={20} /></div>
+            </div>
+        </header></div>
+    )
+}
+
+function ListItem({
+    title,
+    children,
+    href,
+    ...props
+}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
+    return (
+        <li {...props}>
+            <NavigationMenuLink asChild>
+                <Link href={href}>
+                    <div className="text-sm leading-none font-medium">{title}</div>
+                    <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+                        {children}
+                    </p>
+                </Link>
+            </NavigationMenuLink>
+        </li>
+    )
+}

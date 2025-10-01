@@ -170,7 +170,7 @@ export default function ContactPage() {
               <CardContent className="p-6">
                 <h3 className="text-lg font-bold  mb-2">Comment planifier une démonstration ?</h3>
                 <p className="text-primary/80">
-                  Contactez-nous via le formulaire ci-dessus en mentionnant "Démonstration" dans le sujet. Nous vous
+                  Contactez-nous via le formulaire ci-dessus en mentionnant &quot;Démonstration&quot; dans le sujet. Nous vous
                   proposerons un créneau dans les 48h.
                 </p>
               </CardContent>
@@ -187,7 +187,7 @@ export default function ContactPage() {
             <h2 className="text-3xl font-bold text-white">Rejoignez notre communauté</h2>
           </div>
           <p className="text-xl text-purple-100 mb-8">
-            Échangez avec d'autres développeurs et restez informé des dernières nouveautés.
+            Échangez avec d&apos;autres développeurs et restez informé des dernières nouveautés.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-gray-100">

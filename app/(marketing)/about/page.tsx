@@ -6,13 +6,13 @@ import Link from "next/link"
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="mb-6 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 border-purple-200">
-              À propos d'EasyDeploy
+              À propos d&apos;EasyDeploy
             </Badge>
             <h1 className="text-5xl font-bold text-gray-900 mb-6 text-balance">
               Nous simplifions le{" "}
@@ -22,7 +22,7 @@ export default function AboutPage() {
               pour tous
             </h1>
             <p className="text-xl text-gray-600 mb-8 text-pretty">
-              EasyDeploy est né de la frustration des développeurs face à la complexité des plateformes d'hébergement.
+              EasyDeploy est né de la frustration des développeurs face à la complexité des plateformes d&apos;hébergement.
               Notre mission est de rendre le déploiement accessible à tous, des débutants aux experts.
             </p>
           </div>
@@ -39,7 +39,7 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-bold text-gray-900">Notre Mission</h2>
               </div>
               <p className="text-lg text-gray-600 mb-6">
-                Démocratiser l'hébergement web en offrant une plateforme intuitive qui permet à chacun de déployer ses
+                Démocratiser l&apos;hébergement web en offrant une plateforme intuitive qui permet à chacun de déployer ses
                 applications frontend et backend en quelques clics, sans compromis sur la performance.
               </p>
               <div className="flex items-center mb-6">
@@ -47,13 +47,11 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-bold text-gray-900">Notre Vision</h2>
               </div>
               <p className="text-lg text-gray-600">
-                Devenir la référence mondiale pour le déploiement d'applications, en combinant simplicité, performance
+                Devenir la référence mondiale pour le déploiement d&apos;applications, en combinant simplicité, performance
                 et innovation pour accompagner la croissance de millions de projets.
               </p>
             </div>
-            <div className="relative">
-              <img src="/abstract-geometric-shapes.png" alt="Vision EasyDeploy" className="rounded-2xl shadow-2xl" />
-            </div>
+            
           </div>
         </div>
       </section>
@@ -67,8 +65,8 @@ export default function AboutPage() {
               <h2 className="text-4xl font-bold text-gray-900">Notre Équipe</h2>
             </div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Une équipe passionnée de développeurs et d'experts en infrastructure, unis par la volonté de simplifier le
-              déploiement d'applications.
+              Une équipe passionnée de développeurs et d&apos;experts en infrastructure, unis par la volonté de simplifier le
+              déploiement d&apos;applications.
             </p>
           </div>
 
@@ -83,7 +81,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Sarah Chen</h3>
                 <p className="text-purple-600 font-medium mb-3">CEO & Co-fondatrice</p>
                 <p className="text-gray-600">
-                  Ex-ingénieure chez Google, passionnée par l'expérience développeur et l'innovation.
+                  Ex-ingénieure chez Google, passionnée par l&apos;expérience développeur et l&apos;innovation.
                 </p>
               </CardContent>
             </Card>
@@ -112,7 +110,7 @@ export default function AboutPage() {
                 />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Lisa Rodriguez</h3>
                 <p className="text-purple-600 font-medium mb-3">Head of Product</p>
-                <p className="text-gray-600">Designer UX/UI avec 8 ans d'expérience dans les outils développeur.</p>
+                <p className="text-gray-600">Designer UX/UI avec 8 ans d&apos;expérience dans les outils développeur.</p>
               </CardContent>
             </Card>
           </div>
@@ -135,7 +133,7 @@ export default function AboutPage() {
                 <Zap className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Simplicité</h3>
-              <p className="text-gray-600">Rendre complexe simple, accessible à tous les niveaux d'expertise.</p>
+              <p className="text-gray-600">Rendre complexe simple, accessible à tous les niveaux d&apos;expertise.</p>
             </div>
 
             <div className="text-center">
@@ -151,7 +149,7 @@ export default function AboutPage() {
                 <Users className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Communauté</h3>
-              <p className="text-gray-600">Construire ensemble l'avenir du déploiement d'applications.</p>
+              <p className="text-gray-600">Construire ensemble l&apos;avenir du déploiement d&apos;applications.</p>
             </div>
 
             <div className="text-center">
@@ -168,7 +166,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl font-bold text-white mb-6">Rejoignez l'aventure EasyDeploy</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">Rejoignez l&apos;aventure EasyDeploy</h2>
           <p className="text-xl text-purple-100 mb-8">
             Découvrez pourquoi des milliers de développeurs nous font confiance pour leurs déploiements.
           </p>

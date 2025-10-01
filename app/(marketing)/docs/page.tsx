@@ -176,7 +176,7 @@ export default function DocsPage() {
                 <ul className="space-y-2 text-sm text-primary/70 mb-6">
                   <li>• Auto-scaling</li>
                   <li>• Base de données intégrée</li>
-                  <li>• Variables d'environnement</li>
+                  <li>• Variables d&apos;environnement</li>
                   <li>• Monitoring avancé</li>
                 </ul>
                 <Button
@@ -241,7 +241,7 @@ export default function DocsPage() {
                   className="w-full border-[#9333EA] text-[#9333EA] hover:bg-[#9333EA] hover:text-white bg-transparent"
                 >
                   <Link href="#api">
-                    Voir l'API <ExternalLink className="ml-2 h-4 w-4" />
+                    Voir l&apos;API <ExternalLink className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </CardContent>
@@ -323,7 +323,7 @@ export default function DocsPage() {
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-purple-600 bg-transparent"
             >
-              <Link href="/contact">Besoin d'aide ?</Link>
+              <Link href="/contact">Besoin d&apos;aide ?</Link>
             </Button>
           </div>
         </div>

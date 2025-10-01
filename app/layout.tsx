@@ -32,7 +32,7 @@ const themeScript = `
   (function() {
     const STORAGE_KEY = 'theme';
     const root = window.document.body;
-    
+     
     // Fonction pour appliquer ou retirer la classe 'dark'
     function applyTheme(theme) {
       if (theme === 'dark') {

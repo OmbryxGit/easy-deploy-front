@@ -5,50 +5,50 @@ import Link from "next/link"
 
 const plans = [
   {
-    name: "Starter",
+    name: "Démarrage", // Starter
     price: "$0",
-    period: "/month",
-    description: "Perfect for personal projects and learning",
+    period: "/mois", // /month
+    description: "Parfait pour les projets personnels et l'apprentissage", // Perfect for personal projects and learning
     features: [
-      "3 projects",
-      "100GB bandwidth",
-      "Community support",
-      "Basic analytics",
-      "SSL certificates",
-      "GitHub integration",
+      "3 projets",
+      "100 Go de bande passante", // 100GB bandwidth
+      "Support communautaire", // Community support
+      "Analytiques de base", // Basic analytics
+      "Certificats SSL", // SSL certificates
+      "Intégration GitHub", // GitHub integration
     ],
   },
   {
-    name: "Pro",
+    name: "Pro", // Pro
     price: "$29",
-    period: "/month",
-    description: "Ideal for growing businesses and teams",
+    period: "/mois", // /month
+    description: "Idéal pour les entreprises en croissance et les équipes", // Ideal for growing businesses and teams
     features: [
-      "Unlimited projects",
-      "1TB bandwidth",
-      "Priority support",
-      "Advanced analytics",
-      "Custom domains",
-      "Team collaboration",
-      "Environment variables",
-      "Database hosting",
+      "Projets illimités", // Unlimited projects
+      "1 To de bande passante", // 1TB bandwidth
+      "Support prioritaire", // Priority support
+      "Analytiques avancées", // Advanced analytics
+      "Noms de domaine personnalisés", // Custom domains
+      "Collaboration d'équipe", // Team collaboration
+      "Variables d'environnement", // Environment variables
+      "Hébergement de base de données", // Database hosting
     ],
     popular: true,
   },
   {
-    name: "Enterprise",
-    price: "Custom",
+    name: "Entreprise", // Enterprise
+    price: "Sur mesure", // Custom
     period: "",
-    description: "For large-scale applications and organizations",
+    description: "Pour les applications et organisations à grande échelle", // For large-scale applications and organizations
     features: [
-      "Everything in Pro",
-      "Dedicated infrastructure",
-      "24/7 phone support",
-      "SLA guarantees",
-      "Custom integrations",
-      "Compliance certifications",
-      "Advanced security",
-      "Priority deployment",
+      "Tout ce qui est inclus dans Pro", // Everything in Pro
+      "Infrastructure dédiée", // Dedicated infrastructure
+      "Support téléphonique 24/7", // 24/7 phone support
+      "Garanties de niveau de service (SLA)", // SLA guarantees
+      "Intégrations personnalisées", // Custom integrations
+      "Certifications de conformité", // Compliance certifications
+      "Sécurité avancée", // Advanced security
+      "Déploiement prioritaire", // Priority deployment
     ],
   },
 ]
@@ -59,11 +59,13 @@ export default function PricingPage() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Simple, Transparent{" "}
-            <span className="bg-gradient-to-r from-secondary to-tertiary bg-clip-text text-transparent">Pricing</span>
+            Une tarification simple et {" "}
+            <span className="bg-gradient-to-r from-secondary to-tertiary bg-clip-text text-transparent">
+              transparente
+            </span>
           </h1>
           <p className="text-xl text-muted-foreground text-balance max-w-2xl mx-auto">
-            Choose the plan that fits your needs. Scale up or down anytime with no hidden fees.
+            Choisissez le plan qui correspond à vos besoins. Augmentez ou diminuez votre forfait à tout moment, sans frais cachés.
           </p>
         </div>
 
@@ -76,7 +78,7 @@ export default function PricingPage() {
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-gradient-to-r from-secondary to-tertiary text-primary px-4 py-1 rounded-full text-sm font-medium">
-                    Most Popular
+                    Le plus populaire
                   </span>
                 </div>
               )}
@@ -103,7 +105,7 @@ export default function PricingPage() {
                     variant={plan.popular ? "default" : "outline"}
                     size="lg"
                   >
-                    {plan.name === "Enterprise" ? "Contact Sales" : "Get Started"}
+                    {plan.name === "Entreprise" ? "Contacter les ventes" : "Démarrer"}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
@@ -114,10 +116,10 @@ export default function PricingPage() {
 
         <div className="mt-16 text-center">
           <p className="text-muted-foreground mb-4">
-            All plans include 99.9% uptime SLA and 30-day money-back guarantee
+            Tous les plans incluent une garantie de niveau de service (SLA) de 99,9 % de temps de disponibilité et une garantie de remboursement de 30 jours
           </p>
           <Link href="/contact" className="text-secondary hover:text-secondary font-medium">
-            Need a custom plan? Contact our sales team →
+            Besoin d'un plan sur mesure ? Contactez notre équipe commerciale →
           </Link>
         </div>
       </div>
